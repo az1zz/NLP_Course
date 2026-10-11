@@ -1,0 +1,106 @@
+{
+  "1": {
+    "notebook": "Lab1/Lab 1 - Introduction to Natural Language Processing (NLP).ipynb",
+    "status": "passed",
+    "code_cells": 10,
+    "errors": 0,
+    "elapsed_seconds": 9.67,
+    "executed_at_utc": "2026-10-11T20:21:26.331905+00:00",
+    "sha256": "7d9ab4577e7a22513862c6290356b3701e76d7ab476a2753d99caf9d88b9868e",
+    "execution_notebook_sha256": "d04c9df8324e53b9d2948cb7847e747c5a7f9b469e3efcbd707b2be7680a58f2",
+    "post_execution_changes": [
+      "Normalized nbformat 4.5, cell IDs, and LF file line endings; code, markdown, execution counts, and outputs unchanged."
+    ]
+  },
+  "2": {
+    "notebook": "Lab2/Lab2_Text_pre_processing_&_regular_expressions-2.ipynb",
+    "status": "passed",
+    "code_cells": 32,
+    "errors": 0,
+    "elapsed_seconds": 33.48,
+    "executed_at_utc": "2026-10-11T20:21:59.851230+00:00",
+    "sha256": "a1e8710a62cd0491a6232ebe2a2522469d782a28d04739b2b16c9a88532dba56",
+    "execution_notebook_sha256": "ca9ffda6d205c700c9bb7c55d96cac6b3af735f3d3020563a0477ba778f8597b",
+    "post_execution_changes": [
+      "Normalized nbformat 4.5, cell IDs, and LF file line endings; code, markdown, execution counts, and outputs unchanged."
+    ]
+  },
+  "3": {
+    "notebook": "Lab3/Lab3_N_Grams_ipynb.ipynb",
+    "status": "passed",
+    "code_cells": 16,
+    "errors": 0,
+    "elapsed_seconds": 100.94,
+    "executed_at_utc": "2026-10-11T20:26:54.807037+00:00",
+    "sha256": "b859423e19fccfe8537ee7462a4693ad5457aff4073889bba5d8e79763609a90",
+    "execution_notebook_sha256": "1351a68d851ead11329882265f5f563fe1c755df73387ffe732ee518661430ab",
+    "post_execution_changes": [
+      "Normalized nbformat 4.5, cell IDs, and LF file line endings; code, markdown, execution counts, and outputs unchanged."
+    ]
+  },
+  "4": {
+    "notebook": "Lab4/Lab4_Classification_and_evaluation.ipynb",
+    "status": "passed",
+    "code_cells": 10,
+    "errors": 0,
+    "elapsed_seconds": 453.38,
+    "executed_at_utc": "2026-10-11T20:34:28.208979+00:00",
+    "sha256": "ca6f4de3d9005b5eeca0a7e3ab1ba58e48b423d992c07f9682f5e9d1c861aadd",
+    "execution_notebook_sha256": "925729c89e470861412ab459a0d0ce5ae6cbbd9082e7573485c9f717f5bb0570",
+    "post_execution_changes": [
+      "Normalized nbformat 4.5, cell IDs, and LF file line endings; code, markdown, execution counts, and outputs unchanged."
+    ]
+  },
+  "5": {
+    "notebook": "Lab5/Lab5_Text_Representation-2.ipynb",
+    "status": "passed",
+    "code_cells": 20,
+    "errors": 0,
+    "elapsed_seconds": 544.64,
+    "executed_at_utc": "2026-10-11T20:43:32.895118+00:00",
+    "sha256": "91ef0e2941335115e230dfdd8bf363fd82ccbf56daf35cbf222b08c31656a6f3",
+    "execution_notebook_sha256": "bd64a288cb2d4026dd093883861e3116181e6a31378b17fa64ebeaa55f795858",
+    "post_execution_changes": [
+      "Normalized nbformat 4.5, cell IDs, and LF file line endings; code, markdown, execution counts, and outputs unchanged."
+    ]
+  },
+  "6": {
+    "notebook": "Lab6/Lab6_deep_learning_for_nlp-3.ipynb",
+    "status": "passed",
+    "code_cells": 14,
+    "errors": 0,
+    "elapsed_seconds": 20.53,
+    "executed_at_utc": "2026-10-11T20:47:34.155697+00:00",
+    "sha256": "98f48d9644d4b68cc7f7c29ef251ad48650162f56e5459733279b109e73d0fdd",
+    "execution_notebook_sha256": "d89f12ae7152582164cb816196aeb5aa56da82d07770e7160e5f9d856412c8fd",
+    "post_execution_changes": [
+      "Normalized nbformat 4.5, cell IDs, and LF file line endings; code, markdown, execution counts, and outputs unchanged."
+    ]
+  },
+  "7": {
+    "notebook": "Lab7/Lab7_LLMs.ipynb",
+    "status": "passed",
+    "code_cells": 10,
+    "errors": 0,
+    "elapsed_seconds": 36.7,
+    "executed_at_utc": "2026-10-11T20:48:10.893803+00:00",
+    "sha256": "855a19021847af96c7c0f5559da5322e6626ac0eb8cf5d5287f434cbffa20fb5",
+    "execution_notebook_sha256": "aef3ed3147bb4a18c4a66c18bd5555c41c142f8985482d94ecc9b52f526492c4",
+    "post_execution_changes": [
+      "Normalized nbformat 4.5, cell IDs, and LF file line endings; code, markdown, execution counts, and outputs unchanged."
+    ]
+  },
+  "8": {
+    "notebook": "Lab8/Lab8_Part_of_Speech_(POS).ipynb",
+    "status": "passed",
+    "code_cells": 17,
+    "errors": 0,
+    "elapsed_seconds": 18.03,
+    "executed_at_utc": "2026-10-11T20:45:14.592293+00:00",
+    "sha256": "2e7cd051f4e5c707c3723710b81bf3dd3fc8c22d3b2ecbabc37d13b43139a171",
+    "execution_notebook_sha256": "2f7949fdcff6feeb4bd3f5f3ded0ff6de10dfdd91b30100555ac34d02a0c6b76",
+    "post_execution_changes": [
+      "Normalized nbformat 4.5, cell IDs, and LF file line endings; code, markdown, execution counts, and outputs unchanged."
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+[
+  {
+    "lab": 1,
+    "url": "https://github.com/MohammedMosuily/NLP_Lab1",
+    "commit": "9b9c59fca9b53b3d30939f2e069b331044897e68",
+    "notebook": "Lab 1 - Introduction to Natural Language Processing (NLP).ipynb"
+  },
+  {
+    "lab": 2,
+    "url": "https://github.com/MohammedMosuily/NLP_Lab2",
+    "commit": "edf9f438730940ca5d186e672901704e2dc0bfd5",
+    "notebook": "Lab2_Text_pre_processing_&_regular_expressions-2.ipynb"
+  },
+  {
+    "lab": 3,
+    "url": "https://github.com/MohammedMosuily/NLP_Lab3",
+    "commit": "facba2156901400f389b35ceb02601a3ae90aa73",
+    "notebook": "Lab3_N_Grams_ipynb.ipynb"
+  },
+  {
+    "lab": 4,
+    "url": "https://github.com/MohammedMosuily/NLP_Lab4",
+    "commit": "1d43731e45625dc175164bbfd76b6b68ccced7d4",
+    "notebook": "Lab4_Classification_and_evaluation.ipynb"
+  },
+  {
+    "lab": 5,
+    "url": "https://github.com/MohammedMosuily/NLP_Lab5",
+    "commit": "0b87407545bbf8d6d1a81c97690af16593d7be27",
+    "notebook": "Lab5_Text_Representation-2.ipynb"
+  },
+  {
+    "lab": 6,
+    "url": "https://github.com/MohammedMosuily/NLP_Lab6",
+    "commit": "88a67abcb855d7ccc7b83635f917f536ec5b02f6",
+    "notebook": "Lab6_deep_learning_for_nlp-3.ipynb"
+  },
+  {
+    "lab": 7,
+    "url": "https://github.com/MohammedMosuily/NLP_Lab7",
+    "commit": "6f2496b6d64f1c9193772da0f05dab8f70deadb3",
+    "notebook": "Lab7_LLMs.ipynb"
+  },
+  {
+    "lab": 8,
+    "url": "https://github.com/MohammedMosuily/NLP_Lab8",
+    "commit": "258b0437e7c6029e2655aa00343f8ac94ba8f2bd",
+    "notebook": "Lab8_Part_of_Speech_(POS).ipynb"
+  }
+]

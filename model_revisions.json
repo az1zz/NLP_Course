@@ -1,0 +1,5 @@
+{
+  "distilbert-base-uncased-finetuned-sst-2-english": "714eb0fa89d2f80546fda750413ed43d93601a13",
+  "distilgpt2": "2290a62682d06624634c1f46a6ad5be0f47f38aa",
+  "google/flan-t5-small": "0fc9ddf78a1e988dac52e2dac162b0ede4fd74ab"
+}

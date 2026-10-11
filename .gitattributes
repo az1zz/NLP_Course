@@ -1,0 +1,3 @@
+* text=auto eol=lf
+Lab5/dataset/* -text
+Lab6/dataset/* -text
