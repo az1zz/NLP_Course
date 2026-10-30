@@ -29,9 +29,9 @@ os.environ.setdefault("PYTHONHASHSEED", "42")
 parser = argparse.ArgumentParser()
 parser.add_argument("labs", nargs="*", type=int)
 args = parser.parse_args()
-if any(lab not in range(1, 9) for lab in args.labs):
-    parser.error("Lab numbers must be between 1 and 8")
-selected = args.labs or list(range(1, 9))
+if any(lab not in range(1, 11) for lab in args.labs):
+    parser.error("Lab numbers must be between 1 and 10")
+selected = args.labs or list(range(1, 11))
 report_path = ROOT / "execution_report.json"
 report = json.loads(report_path.read_text(encoding="utf-8")) if report_path.exists() else {}
 

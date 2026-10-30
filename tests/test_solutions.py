@@ -67,6 +67,44 @@ class SolutionTests(unittest.TestCase):
         np.testing.assert_array_equal(vectorize([], vectors, 200), np.zeros(200))
         np.testing.assert_array_equal(vectorize(["unknown"], vectors, 200), np.zeros(200))
 
+    def test_lab9_entity_details_report_label_and_positions(self):
+        import contextlib
+        import io
+        import spacy
+
+        describe = notebook_function(9, "describe_entities", nlp=spacy.load("en_core_web_sm"), spacy=spacy)
+        printed = io.StringIO()
+        with contextlib.redirect_stdout(printed):
+            doc = describe("Steve Jobs founded Apple in California.")
+        self.assertEqual([(ent.text, ent.label_) for ent in doc.ents],
+                         [("Steve Jobs", "PERSON"), ("Apple", "ORG"), ("California", "GPE")])
+        self.assertIn("Label: PERSON", printed.getvalue())
+        self.assertIn("Start Position: 0 (character 0)", printed.getvalue())
+        with contextlib.redirect_stdout(io.StringIO()) as empty:
+            self.assertEqual(len(describe("Hello there.").ents), 0)
+        self.assertIn("No named entities", empty.getvalue())
+
+    def test_lab9_saved_custom_model_reproduces_training_annotations(self):
+        import spacy
+
+        model = spacy.load(ROOT / "Lab9" / "custom_ner_model")
+        text = ("Microsoft was founded by Bill Gates and Paul Allen in Albuquerque, New Mexico. "
+                "It is known for its Windows operating system and Office software products.")
+        self.assertEqual([(ent.text, ent.label_) for ent in model(text).ents],
+                         [("Microsoft", "ORG"), ("Bill Gates", "PERSON"), ("Paul Allen", "PERSON"),
+                          ("Albuquerque, New Mexico", "GPE"), ("Windows", "PRODUCT"), ("Office", "PRODUCT")])
+
+    def test_lab10_tokenization_keeps_french_elisions_and_round_trips(self):
+        import unicodedata
+
+        tokenize = notebook_function(10, "tokenize", unicodedata=unicodedata)
+        detokenize = notebook_function(10, "detokenize")
+        tokens = tokenize("Je n'ai pas pu m'endormir à cause du bruit.")
+        self.assertEqual(tokens, ["je", "n'", "ai", "pas", "pu", "m'", "endormir", "à", "cause", "du", "bruit", "."])
+        self.assertEqual(detokenize(tokens), "Je n'ai pas pu m'endormir à cause du bruit.")
+        self.assertEqual(tokenize("Who?"), ["who", "?"])
+        self.assertEqual(detokenize(["comment", "ça", "va", "?"]), "Comment ça va ?")
+
 
 if __name__ == "__main__":
     unittest.main()

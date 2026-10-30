@@ -46,5 +46,17 @@
     "url": "https://github.com/MohammedMosuily/NLP_Lab8",
     "commit": "258b0437e7c6029e2655aa00343f8ac94ba8f2bd",
     "notebook": "Lab8_Part_of_Speech_(POS).ipynb"
+  },
+  {
+    "lab": 9,
+    "url": "https://github.com/MohammedMosuily/NLP_Lab9",
+    "commit": "a0b309f7f3b250fde2e1e7c6eca6b4feb45eb350",
+    "notebook": "Lab9_Named_Entity_Recognition.ipynb"
+  },
+  {
+    "lab": 10,
+    "url": "https://github.com/MohammedMosuily/NLP_lab10",
+    "commit": "25bd7ba4c84748f246809556d372f083fb1a379e",
+    "notebook": "Lab10_Introduction_to_Machine_Translation-2.ipynb"
   }
 ]

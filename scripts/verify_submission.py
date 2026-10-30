@@ -7,9 +7,9 @@ import nbformat
 
 ROOT = Path(__file__).resolve().parents[1]
 report = json.loads((ROOT / "execution_report.json").read_text(encoding="utf-8"))
-assert set(report) == {str(lab) for lab in range(1, 9)}, "Execution report must cover all eight labs"
+assert set(report) == {str(lab) for lab in range(1, 11)}, "Execution report must cover all ten labs"
 
-for lab in range(1, 9):
+for lab in range(1, 11):
     entry = report[str(lab)]
     path = ROOT / entry["notebook"]
     assert entry["status"] == "passed" and entry["errors"] == 0, f"Lab {lab}: failed execution"
@@ -27,6 +27,14 @@ for lab in range(1, 9):
         assert any("image/png" in output.get("data", {}) for output in outputs), "Missing confusion-matrix plot"
     if lab == 8:
         assert any("<svg" in output.get("data", {}).get("text/html", "") for output in outputs), "Missing displaCy visualization"
+    if lab == 9:
+        html = "".join(output.get("data", {}).get("text/html", "") for output in outputs)
+        assert html.count('class="entities"') >= 2, "Missing displaCy entity visualizations"
+        assert (path.parent / "custom_ner_model" / "meta.json").is_file(), "Missing saved custom_ner_model"
+    if lab == 10:
+        text = "".join("".join(output.get("text", "")) for output in outputs if output.output_type == "stream")
+        assert "BLEU-4" in text and "Exact-match translations" in text, "Missing translation evaluation"
+        assert any("image/png" in output.get("data", {}) for output in outputs), "Missing training-curve plot"
     print(f"PASS Lab {lab}: executed notebook, student identity, hash, and required outputs")
 
-print("PASS: all eight lab submissions verified")
+print("PASS: all ten lab submissions verified")

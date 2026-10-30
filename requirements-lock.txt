@@ -92,6 +92,7 @@ spacy-loggers==1.0.5
 srsly==2.5.4
 stack-data==0.6.3
 sympy==1.14.0
+tensorflow==2.16.2
 thinc==8.2.5
 threadpoolctl==3.7.0
 tokenizers==0.22.2

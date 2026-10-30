@@ -102,5 +102,23 @@
     "post_execution_changes": [
       "Normalized nbformat 4.5, cell IDs, and LF file line endings; code, markdown, execution counts, and outputs unchanged."
     ]
+  },
+  "9": {
+    "notebook": "Lab9/Lab9_Named_Entity_Recognition.ipynb",
+    "status": "passed",
+    "code_cells": 15,
+    "errors": 0,
+    "elapsed_seconds": 4.2,
+    "executed_at_utc": "2026-10-29T22:57:46.385612+00:00",
+    "sha256": "bad4164b7f5dbbb90738fd8a754a4268e9344b5cbedb55eaa02af7ad87a1dc1f"
+  },
+  "10": {
+    "notebook": "Lab10/Lab10_Introduction_to_Machine_Translation-2.ipynb",
+    "status": "passed",
+    "code_cells": 19,
+    "errors": 0,
+    "elapsed_seconds": 2248.88,
+    "executed_at_utc": "2026-10-30T00:16:22.025175+00:00",
+    "sha256": "c8f92bd132ebace1b9c09eb06415b8e6615c36287a81f6f15c74730f6701cbb6"
   }
 }

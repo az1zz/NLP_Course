@@ -12,6 +12,7 @@ DATASETS = {
     "disneyland": ("arushchillar/disneyland-reviews", 1),
     "amazon": ("PromptCloudHQ/amazon-reviews-unlocked-mobile-phones", 1),
     "news": ("clmentbisaillon/fake-and-real-news-dataset", 1),
+    "translation": ("devicharith/language-translation-englishfrench", 2),
 }
 
 
@@ -34,6 +35,7 @@ if __name__ == "__main__":
         "disneyland": "DisneylandReviews.csv",
         "amazon": "Amazon_Unlocked_Mobile.csv",
         "news": "True.csv",
+        "translation": "eng_-french.csv",
     }
     for key, filename in filenames.items():
         path = dataset_file(key, filename)

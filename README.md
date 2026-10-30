@@ -1,4 +1,4 @@
-# NLP Course — Labs 1–8
+# NLP Course — Labs 1–10
 
 **Student:** Abdulaziz Saqer BinRuqush
 
@@ -22,10 +22,12 @@ and the final validation record.
 | [Lab 6](Lab6/) | Yelp sentiment classification with PyTorch and Word2Vec |
 | [Lab 7](Lab7/) | Transformer model families, inference, and reflection |
 | [Lab 8](Lab8/) | POS tagging and dependency visualization |
+| [Lab 9](Lab9/) | Named entity recognition with spaCy and a custom NER model |
+| [Lab 10](Lab10/) | Neural machine translation (English to French) with TensorFlow |
 
 ## Reproduce on Windows
 
-The solutions use Python 3.9 and CPU execution. From the repository root in
+Labs 1–8 were executed with Python 3.9 on Windows (CPU); Labs 9 and 10 were executed on Linux with Python 3.11 (CPU), spaCy 3.7.5 and TensorFlow 2.16.2 (Keras 3.15.1). From the repository root in
 PowerShell, create an environment and install the pinned packages:
 
 ```powershell
@@ -53,7 +55,7 @@ or its lab folder. You can also execute all notebooks without opening an editor:
 To execute selected labs, pass their numbers, for example:
 
 ```powershell
-.\.venv\Scripts\python.exe scripts\run_labs.py 6 7 8
+.\.venv\Scripts\python.exe scripts\run_labs.py 6 7 8 9 10
 ```
 
 Every lab starts a new kernel. The runner stops on an error, writes the partial
@@ -75,7 +77,7 @@ and fake/real news use version 1; Pakistan tweets use version 2.
 
 External datasets, NLTK resources, and Hugging Face model weights are cached in
 the ignored `.cache` folder. They are acquired automatically as needed, and are
-not redistributed in this repository. Lab 7 downloads DistilGPT-2,
+not redistributed in this repository. Lab 10 downloads the Kaggle English–French sentence pairs (version 2). Lab 7 downloads DistilGPT-2,
 `google/flan-t5-small`, and
 `distilbert-base-uncased-finetuned-sst-2-english` on its first run.
 Use an internet connection for the initial downloads. Complete-dataset training
