@@ -120,5 +120,14 @@
     "elapsed_seconds": 2248.88,
     "executed_at_utc": "2026-10-30T00:16:22.025175+00:00",
     "sha256": "c8f92bd132ebace1b9c09eb06415b8e6615c36287a81f6f15c74730f6701cbb6"
+  },
+  "11": {
+    "notebook": "Lab11/Lab_11_Attention_with_RNN.ipynb",
+    "status": "passed",
+    "code_cells": 11,
+    "errors": 0,
+    "elapsed_seconds": 11.64,
+    "executed_at_utc": "2026-11-01T08:39:14.912402+00:00",
+    "sha256": "a0a39ba965cec8c82a7282989f97d94324f3280b03fcfca457801d4c8ae3e95d"
   }
 }

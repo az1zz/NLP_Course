@@ -4,8 +4,8 @@
 
 **Student ID:** 2230007229
 
-All ten notebooks were executed in fresh Python kernels on CPU. All **163
-code cells** completed with **zero execution errors**. Eight behavior tests
+All eleven notebooks were executed in fresh Python kernels on CPU. All **174
+code cells** completed with **zero execution errors**. Nine behavior tests
 passed, and `pip check` found no incompatible installed dependencies.
 The saved notebook outputs contain no warning streams.
 
@@ -21,6 +21,7 @@ The saved notebook outputs contain no warning streams.
 | 8 | 17 | Contextual POS tags, comparison table, and saved displaCy diagrams |
 | 9 | 15 | Entity details, contract-paragraph corrections (1 PERSON, 2 ORG), custom NER model trained 20 iterations and reloaded |
 | 10 | 19 | English-to-French LSTM encoder-decoder: test BLEU-4 26.0 (BLEU-1 56.4), 71.9% next-word accuracy on 13,647 held-out pairs |
+| 11 | 11 | Attention RNN: 98.2% training accuracy (165 of 168), attention charts for five questions |
 
 ## Interpretation
 
@@ -45,6 +46,13 @@ translator handles short common sentences well but makes clear errors on
 others (including some e-commerce examples); sentences are limited to 10
 tokens. The Lab 10 notebook prints every example exactly as produced.
 
+Lab 11 reports training accuracy only (the instructor's dataset has no held-out
+split). Its notebook documents two fixes to the instructor's code: the RNN is
+created with `batch_first=True` (otherwise it ran across the questions of the
+batch instead of across their words) and training clears gradients each step.
+Attention does not always sit on the most meaningful word, and the notebook
+says so.
+
 ## Execution evidence
 
 [execution_report.json](execution_report.json) records each notebook's cell
@@ -53,6 +61,6 @@ original execution-file hash: after execution, notebook schema metadata and
 cell IDs were normalized to nbformat 4.5. Code, markdown, execution counts,
 and outputs were checked to remain unchanged by that normalization.
 
-`scripts/verify_submission.py` validates all ten saved files, hashes,
+`scripts/verify_submission.py` validates all eleven saved files, hashes,
 student identity, execution counts, and required image/SVG outputs.
 See the [course README](README.md) for reproduction commands.

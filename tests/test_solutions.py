@@ -105,6 +105,31 @@ class SolutionTests(unittest.TestCase):
         self.assertEqual(tokenize("Who?"), ["who", "?"])
         self.assertEqual(detokenize(["comment", "ça", "va", "?"]), "Comment ça va ?")
 
+    def test_lab11_attention_model_is_independent_of_the_other_questions_in_the_batch(self):
+        import types
+
+        import torch
+        from torch import nn
+
+        notebook = json.loads(next((ROOT / "Lab11").glob("*.ipynb")).read_text(encoding="utf-8"))
+        source = next("".join(cell["source"]) for cell in notebook["cells"]
+                      if cell["cell_type"] == "code" and "class RNN(" in "".join(cell["source"]))
+        tree = ast.parse(source)
+        classes = [node for node in tree.body if isinstance(node, ast.ClassDef)]
+        scope = {"nn": nn, "torch": torch,
+                 "tokenizer": types.SimpleNamespace(word_index={f"w{i}": i + 1 for i in range(20)}),
+                 "df": {"answer_id": types.SimpleNamespace(nunique=lambda: 5)}}
+        exec(compile(ast.Module(body=classes, type_ignores=[]), str(ROOT), "exec"), scope)
+        torch.manual_seed(0)
+        model = scope["RNN"]().eval()
+        batch = torch.randint(1, 21, (6, 7))
+        with torch.no_grad():
+            batch_logits, batch_weights = model(batch)
+            single_logits, single_weights = model(batch[3:4])
+        torch.testing.assert_close(batch_logits[3:4], single_logits, atol=1e-5, rtol=1e-4)
+        torch.testing.assert_close(batch_weights[3:4], single_weights, atol=1e-5, rtol=1e-4)
+        torch.testing.assert_close(batch_weights.sum(dim=1), torch.ones(6), atol=1e-5, rtol=1e-4)
+
 
 if __name__ == "__main__":
     unittest.main()

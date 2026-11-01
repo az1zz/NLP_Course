@@ -58,5 +58,11 @@
     "url": "https://github.com/MohammedMosuily/NLP_lab10",
     "commit": "25bd7ba4c84748f246809556d372f083fb1a379e",
     "notebook": "Lab10_Introduction_to_Machine_Translation-2.ipynb"
+  },
+  {
+    "lab": 11,
+    "url": "https://github.com/MohammedMosuily/NLP_lab11",
+    "commit": "5d6bfe2b8285076a4610e8c430560d811eaa0446",
+    "notebook": "Lab_11_Attention_with_RNN.ipynb"
   }
 ]

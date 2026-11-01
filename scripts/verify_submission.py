@@ -7,9 +7,9 @@ import nbformat
 
 ROOT = Path(__file__).resolve().parents[1]
 report = json.loads((ROOT / "execution_report.json").read_text(encoding="utf-8"))
-assert set(report) == {str(lab) for lab in range(1, 11)}, "Execution report must cover all ten labs"
+assert set(report) == {str(lab) for lab in range(1, 12)}, "Execution report must cover all eleven labs"
 
-for lab in range(1, 11):
+for lab in range(1, 12):
     entry = report[str(lab)]
     path = ROOT / entry["notebook"]
     assert entry["status"] == "passed" and entry["errors"] == 0, f"Lab {lab}: failed execution"
@@ -35,6 +35,9 @@ for lab in range(1, 11):
         text = "".join("".join(output.get("text", "")) for output in outputs if output.output_type == "stream")
         assert "BLEU-4" in text and "Exact-match translations" in text, "Missing translation evaluation"
         assert any("image/png" in output.get("data", {}) for output in outputs), "Missing training-curve plot"
+    if lab == 11:
+        assert sum("image/png" in output.get("data", {}) for output in outputs) >= 3, "Missing attention charts"
+        assert any("Training accuracy" in "".join(output.get("text", "")) for output in outputs), "Missing accuracy check"
     print(f"PASS Lab {lab}: executed notebook, student identity, hash, and required outputs")
 
-print("PASS: all ten lab submissions verified")
+print("PASS: all eleven lab submissions verified")
